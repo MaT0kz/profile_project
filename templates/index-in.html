@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+    <title>GHOST BYTES</title>
+  </head>
+  <body>
+    <header class="main-header">
+        <nav class="main-header-nav">
+            <ul class="site-navigation">
+                <div class="site-navigation-group">
+                    <li class="site-navigation-item">
+                        <a href="{{ url_for('index') }}">Главная</a>
+                    </li>
+                    <li class="site-navigation-item">
+                        <a href="{{ url_for('rating') }}">Рейтинг</a>
+                    </li>
+                </div>
+                <div class="site-navigation-group">
+                    <li class="site-navigation-item" >
+                        <a href="{{ url_for('profile', nickname=current_user.nickname) }}" id="logo">GhostBytes</a>
+                    </li>
+                </div>
+                <div class="site-navigation-group">
+                    <li class="site-navigation-item">
+                         <form action="" method="get" class="search-button">
+                            <input name="search" placeholder="Поиск..." type="search">
+                            <button type="submit">
+                                <span class="material-symbols-outlined">search</span>
+                            </button>
+                        </form> 
+                    </li>
+                    <li class="site-navigation-item">
+                        <a href="{{ url_for('profile', nickname=current_user.nickname) }}" class="user-button">
+                            <img src="{{ url_for('static', filename='img/user.svg') }}" width="40" height="40">
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <p class="title">Присоединяйся к семье UI/UX-<br>дизайнеров!</p>
+            <a href="{{ url_for('registration') }}" class="reg-button-1">Создать портфолио</a>
+        </div>
+        <h1 class="welcome">Добро пожаловать на GhostBytes!</h1>
+        <p class="welcome-text">Наш сервис поможет вам продемонстрировать свои навыки, 
+            получить поддержку от других людей из<br>сферы веб-дизайна, 
+            отслеживать собственный прогресс, а также найти команду для будущих проектов.
+        </p>
+        <h2 class="advantages-title">Преимущества GhostBytes:</h2>
+        <ul class="advantages-list">
+            <li class="advantages">
+                Возможность рассказать о себе и своих навыках.
+            </li>
+            <li class="advantages">
+                Комментируйте и ставьте лайки на понравившиеся работы других пользователей.
+            </li>
+            <li class="advantages">
+                Рейтинг самых активных пользователей.
+            </li>
+        </ul>
+        <div class="container">
+            <p class="start">Создай своё портфолио<br>прямо сейчас!</p>
+            <a href="{{ url_for('registration') }}" class="reg-button-2">Начать работу</a>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="dropdown">
+            <div class="dropbtn">Язык</div>
+            <div class="dropdown-content">
+              <a href="#">Русский</a>
+              <a href="#">English</a>
+            </div>
+          </div>
+    </footer>
+  </body>
+</html>
