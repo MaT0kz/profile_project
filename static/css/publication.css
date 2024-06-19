@@ -1,0 +1,256 @@
+* { margin: 0; padding: 0; }
+body {
+    background-color: #ffffff;
+    font-family: "Inter";
+    font-size: 23px;
+    line-height: 150%;
+    color: #000000;
+    background: url("../img/background2.png") no-repeat;
+    background-size: cover;
+}
+
+.main-header {
+    background-color: #4862E7;
+    height: 146px;
+}
+
+.site-navigation {
+    height: 146px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-navigation-group {
+    display: flex;
+    width: 34%;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+}
+
+.site-navigation-item a {
+    font-family: "Roboto Mono";
+    font-size: 28px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+li:nth-child(4) {
+    font-size: 40px;
+    font-family: "Inter";
+}
+
+.site-navigation-item {
+    list-style-type: none;
+}
+
+#logo {
+    font-size: 40px;
+    font-family: "Inter";
+}
+
+* {box-sizing: border-box;}
+.search-button {
+    position: relative;
+    width: 291px;
+    margin: 0 auto;
+}
+.search-button input {
+    width: 100%;
+    height: 61px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+    background: #ffffff;
+    color: #000000;
+    font-family: "Inter";
+    font-size: 22px;
+}
+.search-button button {
+    position: absolute; 
+    top: 10px;
+    right: 0px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: #ffffff;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.search-button button:before {
+    font-size: 22px;
+    color: #000000;
+}
+
+.log-in-button {
+    background-color: #00168A;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+    border: none;
+    border-radius: 40px;
+    padding: 12px 30px;
+}
+
+.user-button {
+    padding: 10px;
+    border-radius: 40px;
+    background-color: white;
+    display: flex;
+}
+
+main {
+    display: flex;
+    width: 1361px;
+    margin: 0 auto;
+}
+
+.publication {
+    width: 1131px;
+    height: 880px;
+    background-color: #EAE9E9;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.heart-container {
+    display: flex;
+    align-items: center;
+    margin-top: 23px;
+    margin-left: 16px;
+    gap: 3px;
+}
+
+.likes-number {
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.heart {
+    fill: none;
+    stroke: #000000;
+    background: transparent;
+    border: none;
+}
+
+.added {
+    fill: red;
+    stroke: red;
+}
+
+.username {
+    margin: 0;
+    padding: 25px 0 96px 10px;
+    border-bottom: 1px solid #908E8E;
+    font-size: 24px;
+}
+
+.tags {
+    padding-left: 16px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #908E8E;
+    font-size: 24px;
+}
+
+.comment-field {
+    width: 280px;
+    font-size: 22px;
+    font-weight: 300;
+    padding: 7px;
+    border-radius: 13px;
+    background-color: #F2F2F2;
+    border: none;
+    margin: 25px auto;
+}
+
+.comment-field::placeholder {
+    color: #000000;
+}
+
+.comment-feed {
+    padding-left: 25px;
+    font-size: 22px;
+}
+
+.comment-list {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0; 
+    list-style: none;
+}
+
+.main-footer {
+    background-color: #00168A;
+    color: #ffffff;
+    height: 86px;
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn {
+    padding: 5px;
+    cursor: pointer;
+    padding-right: 15px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00168A;
+    width: 140px;
+}
+
+/*.dropbtn
+{
+  background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
+  padding-left: 25px;
+  width: 40px;
+}*/
+
+.dropbtn::after {
+    background: rgba(0, 0, 0, 0) url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-16.png") no-repeat scroll center center;
+    content: "";
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 16px;
+}
+
+.dropdown-content a:first-child
+{
+  background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
+}
+
+.dropdown-content a:last-child
+{
+  background: url('https://icons.iconarchive.com/icons/fatcow/farm-fresh/16/flag-usa-icon.png') no-repeat left center;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #ffffff;
+    padding: 2px 0 2px 25px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #00199B}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
